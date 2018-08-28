@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name_student" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birth" Type="DateTime" Precision="0" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_father" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Studies_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Study" Relationship="Self.FK__Students__Studie__1273C1CD" FromRole="Students" ToRole="Studies" />
+  </EntityType>
+  <EntityType Name="Study">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name_study" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Students" Relationship="Self.FK__Students__Studie__1273C1CD" FromRole="Studies" ToRole="Students" />
+  </EntityType>
+  <Association Name="FK__Students__Studie__1273C1CD">
+    <End Role="Studies" Type="Self.Study" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Studies">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Studies_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SchoolsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Studies" EntityType="Self.Study" />
+    <AssociationSet Name="FK__Students__Studie__1273C1CD" Association="Self.FK__Students__Studie__1273C1CD">
+      <End Role="Studies" EntitySet="Studies" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

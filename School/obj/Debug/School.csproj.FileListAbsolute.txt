@@ -1,0 +1,10 @@
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\bin\Debug\School.exe.config
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\bin\Debug\School.exe
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\bin\Debug\School.pdb
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\bin\Debug\EntityFramework.dll
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\bin\Debug\EntityFramework.xml
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\obj\Debug\School.csprojResolveAssemblyReference.cache
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\obj\Debug\School.exe
+c:\users\singgihpratama99\documents\visual studio 2015\Projects\School\School\obj\Debug\School.pdb
